@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+ul.demo {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
+    <title>Code Breaker Game</title>
+<link rel="stylesheet" href="suit.css">
+<link href="http://fonts.cdnfonts.com/css/papyrus" rel="stylesheet">
+  </head>
+
+  <body>
+    <!--<div class="score">
+      <p>Score: <span id="outputScore"></span></p>
+      <p id="highScore">High score: 0</p>
+      <p id="currentScore">Score: 10</p>-->
+
+          </div>
+        </div>
+        <div class="title">
+    <h1>Code Breaker Game</h1>
+  </div>
+    <div class="frame">
+
+    </div>
+
+  <!--  <h2><center>Instructions:</h2>
+    <div class="instruction1"><p>A secret code number is generated between 1-100.<br></p></div>
+    <div class="instruction2"><p>You have 10 turns to correctly break the code by putting a guess in the orange box. <br></p></div>
+    <div class="instruction3"><p>With each wrong code, a hint will appear.</p></div>-->
+    <center><button id="myBtn">Instructions</button></center>
+    <!-- The instruction Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <div class="instruction1"><p>A secret code number is generated between 1-100.<br></p></div>
+        </div>
+        <div class="modal-body">
+        <div class="instruction2"><p>You have 10 turns to correctly break the code by putting a guess in the orange box. <br></p></div>
+        </div>
+        <div class="modal-footer">
+        <div class="instruction3"><p>With each wrong code, a hint will appear.</p></div>
+        </div>
+      </div>
+
+    </div>
+<!--do note that the history comes after you submit a number--->
+
+    <div class=submitBox>
+      <label for="codeField">Insert Code Here: </label><input type="text" id="codeField" class="codeField">
+
+      <input type="submit" value="Submit" class="codeSubmit">
+      <span id="codes"></span>
+    </div>
+    <div class="reset"><center>
+      <p><input type="button" value="Reset" onclick="refreshPage()"</p>
+    </div>
+
+    <div class="logParas">
+      <p class="codes"></p>
+
+      <!--history-->
+      <ul class="demo">
+  <li>
+      <p class="lastCode"></li>
+    </ul>
+
+      <!--hints-->
+      <p class="hints"></p>
+    </div>
+
+    <div class = "bottomtext">
+
+        <small>&copy; Copyright 2022, Michael Zou Wu -Code Breaker Game-</small>
+
+    </div>
+
+
+
+<!---You win Modal
+
+<div id="win" class="modal">
+
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <div class="instruction1"><p>A secret code number is generated between 1-100.<br></p></div>
+    </div>
+    <div class="modal-body">
+    <div class="instruction2"><p>You have 10 turns to correctly break the code by putting a guess in the orange box. <br></p></div>
+    </div>
+    <div class="modal-footer">
+    <div class="instruction3"><p>With each wrong code, a hint will appear.</p></div>
+    </div>
+  </div>-->
+
+</div>
+
+    <script src="game.js">
+    </script>
+  </body>
+</html>
